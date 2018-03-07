@@ -27,27 +27,37 @@ namespace AdventureAwaits
             " throws phonebooks at the ",
             };
 
-        public string[] monList = new string[] {
-             "Angry Rabbit",
-             "Severely Snippy Snail",
-             "Diggle",
-             "Grue",
-             "Sand Worm",
-             "Murloc",
-             "Mathemagical Mage",
-             "Sleazy Lawyer",
-             "Testificate",
-             "Rabid Pokemon",
-             "Irritable Professor",
-             "Spooky Scary Skeleton",
-             "Grid Bug"};
+        //public string[] monList = new string[] {
+        //     "Angry Rabbit",
+        //     "Severely Snippy Snail",
+        //     "Diggle",
+        //     "Grue",
+        //     "Sand Worm",
+        //     "Murloc",
+        //     "Mathemagical Mage",
+        //     "Sleazy Lawyer",
+        //     "Testificate",
+        //     "Rabid Pokemon",
+        //     "Irritable Professor",
+        //     "Spooky Scary Skeleton",
+        //     "Grid Bug",
+        //     "Angry Orange Cheeto",
+        //     "Cali Cartel Godfather"};
 
+        public Monster[] monList = new Monster[3];
+        //Format of Monster = (Name, HPMin, HPMax, DamMin, DamMax)
+        public void popMonList()
+        {
+            monList[0] = new Monster("Grue", 50, 75, 10, 20);
+            monList[1] = new Monster("Diggle", 50, 75, 10, 20);
+            monList[2] = new Monster("Angry Rabbit", 50, 75, 10, 20);
+        }
 
 
 
 
         public String returnMon = "404 MONSTER NOT FOUND";
-        
+        public string[] currentMonster = new string[5];
 
 
 
@@ -55,8 +65,9 @@ namespace AdventureAwaits
 
         public GameEngine()
         {
+            popMonList();
+            createMonster();
 
-            Monster[] monList = new Monster[3];
 
         }
 
@@ -64,18 +75,22 @@ namespace AdventureAwaits
 
 
         //Creates a monster from the list
-        public string createMonster()
+        public void createMonster()
         {
-
-            string returnMonster = monList[rand.Next(0, monList.Length)];
-            return returnMonster;
-
+            //Format of Monster = (Name, HPMin, HPMax, DamMin, DamMax)
+      
+            int curMonIndex = rand.Next(0, monList.Length);
+            currentMonster[0] = monList[curMonIndex].Name;
+            currentMonster[1] = monList[curMonIndex].HPMin.ToString();
+            currentMonster[2] = monList[curMonIndex].HPMax.ToString();
+            currentMonster[3] = monList[curMonIndex].DamMin.ToString();
+            currentMonster[4] = monList[curMonIndex].DamMax.ToString();
         }
 
-        public int attack()
+        public int attack(int Min, int Max)
         {
 
-            attackDamage = rand.Next(4, 10);
+            attackDamage = rand.Next(Min, Max);
             return attackDamage;
 
         }

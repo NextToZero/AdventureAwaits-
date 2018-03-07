@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,8 @@ namespace AdventureAwaits
             InitializeComponent();
             playerName = Microsoft.VisualBasic.Interaction.InputBox("Select your name Adventurer! ", "Name Select", "Chance");
             playerGB.Text = playerName;
+            playerHP = 100;
+            playerHPMax = 100;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -49,13 +52,34 @@ namespace AdventureAwaits
         public void monsterAttack()
         {
 
-            attackDamage = ge.attack();
+            attackDamage = ge.attack(Int32.Parse(ge.currentMonster[3]),Int32.Parse(ge.currentMonster[4]));
             monsterAttackDescLB.Text = genAttackDesc(currentMonster, playerName) + " ( " + attackDamage + " damage)";
+            if (playerHP >= attackDamage)
+            {
+                playerHP -= attackDamage;
+                PlayerHPPB.Value = playerHP;
+                PlayerHPNumLB.Text = playerHP.ToString() + "\\" + playerHPMax;
 
+
+            }
+            else
+            {
+                PlayerHPPB.Value -= PlayerHPPB.Value;
+                playerHP = 0;
+                PlayerHPNumLB.Text = playerHP.ToString() + "\\" + playerHPMax;
+            }
+            if (playerHP <= 0)
+            {
+                
+                PlayerHPNumLB.Text = "0" + "\\" + playerHPMax;
+                MessageBox.Show("You have been vanquished! Try again later!");
+                this.Close();
+
+            }
         }
         public void attack()
         {
-            attackDamage = ge.attack();
+            attackDamage = ge.attack(10,20);
             playerAttackDescLB.Text = genAttackDesc(playerName, currentMonster) + " ( " + attackDamage + " damage)";
             if (monsterHP >= attackDamage)
             {
@@ -107,7 +131,8 @@ namespace AdventureAwaits
         }
         public void genMonster()
         {
-            currentMonster = (ge.createMonster());
+            ge.createMonster();
+            currentMonster = (ge.currentMonster[0]);
             MonsterStatusGB.Text = currentMonster;
             monsterHP = rand.Next(1, 100);
             monsterHPMax = monsterHP;

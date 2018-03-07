@@ -30,7 +30,7 @@
         {
             this.playerGB = new System.Windows.Forms.GroupBox();
             this.HPText = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.PlayerHPPB = new System.Windows.Forms.ProgressBar();
             this.attackBT = new System.Windows.Forms.Button();
             this.MonsterStatusGB = new System.Windows.Forms.GroupBox();
             this.MonsterHPNumLB = new System.Windows.Forms.Label();
@@ -42,6 +42,7 @@
             this.InvGB = new System.Windows.Forms.GroupBox();
             this.DefMonsterGB = new System.Windows.Forms.GroupBox();
             this.DefMonsterLB = new System.Windows.Forms.Label();
+            this.PlayerHPNumLB = new System.Windows.Forms.Label();
             this.playerGB.SuspendLayout();
             this.MonsterStatusGB.SuspendLayout();
             this.DefMonsterGB.SuspendLayout();
@@ -49,8 +50,9 @@
             // 
             // playerGB
             // 
+            this.playerGB.Controls.Add(this.PlayerHPNumLB);
             this.playerGB.Controls.Add(this.HPText);
-            this.playerGB.Controls.Add(this.progressBar1);
+            this.playerGB.Controls.Add(this.PlayerHPPB);
             this.playerGB.Location = new System.Drawing.Point(12, 12);
             this.playerGB.Name = "playerGB";
             this.playerGB.Size = new System.Drawing.Size(200, 100);
@@ -67,13 +69,13 @@
             this.HPText.TabIndex = 1;
             this.HPText.Text = "HP:";
             // 
-            // progressBar1
+            // PlayerHPPB
             // 
-            this.progressBar1.Location = new System.Drawing.Point(38, 19);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(100, 14);
-            this.progressBar1.TabIndex = 0;
-            this.progressBar1.Value = 100;
+            this.PlayerHPPB.Location = new System.Drawing.Point(38, 19);
+            this.PlayerHPPB.Name = "PlayerHPPB";
+            this.PlayerHPPB.Size = new System.Drawing.Size(100, 14);
+            this.PlayerHPPB.TabIndex = 0;
+            this.PlayerHPPB.Value = 100;
             // 
             // attackBT
             // 
@@ -177,6 +179,14 @@
             this.DefMonsterLB.Size = new System.Drawing.Size(194, 238);
             this.DefMonsterLB.TabIndex = 0;
             // 
+            // PlayerHPNumLB
+            // 
+            this.PlayerHPNumLB.AutoSize = true;
+            this.PlayerHPNumLB.Location = new System.Drawing.Point(144, 19);
+            this.PlayerHPNumLB.Name = "PlayerHPNumLB";
+            this.PlayerHPNumLB.Size = new System.Drawing.Size(0, 13);
+            this.PlayerHPNumLB.TabIndex = 4;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,7 +215,7 @@
 
         private System.Windows.Forms.GroupBox playerGB;
         private System.Windows.Forms.Label HPText;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar PlayerHPPB;
         private System.Windows.Forms.Button attackBT;
         private System.Windows.Forms.GroupBox MonsterStatusGB;
         private System.Windows.Forms.ProgressBar MonsterHPPB;
@@ -217,6 +227,7 @@
         private System.Windows.Forms.GroupBox InvGB;
         private System.Windows.Forms.GroupBox DefMonsterGB;
         private System.Windows.Forms.Label DefMonsterLB;
+        private System.Windows.Forms.Label PlayerHPNumLB;
     }
 }
 
