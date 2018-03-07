@@ -11,8 +11,18 @@ F:\Comp2210\CSharp\AA\AdventureAwaits\AdventureAwaits\bin\Debug\AdventureAwaits.
 F:\Comp2210\CSharp\AA\AdventureAwaits\AdventureAwaits\obj\Debug\AdventureAwaits.exe
 F:\Comp2210\CSharp\AA\AdventureAwaits\AdventureAwaits\obj\Debug\AdventureAwaits.pdb
 F:\Comp2210\CSharp\AA\AdventureAwaits\AdventureAwaits\obj\Debug\AdventureAwaits.csprojResolveAssemblyReference.cache
-F:\Comp2210\CSharp\AA\AdventureAwaits\AdventureAwaits\obj\Debug\AdventureAwaits.Form1.resources
 F:\Comp2210\CSharp\AA\AdventureAwaits\AdventureAwaits\obj\Debug\AdventureAwaits.Properties.Resources.resources
 F:\Comp2210\CSharp\AA\AdventureAwaits\AdventureAwaits\obj\Debug\AdventureAwaits.csproj.GenerateResource.Cache
 F:\Comp2210\CSharp\AA\AdventureAwaits\AdventureAwaits\bin\Debug\AdventureAwaits.exe
 F:\Comp2210\CSharp\AA\AdventureAwaits\AdventureAwaits\bin\Debug\AdventureAwaits.pdb
+F:\Comp2210\CSharp\AA\AdventureAwaits\AdventureAwaits\obj\Debug\AdventureAwaits.MainForm.resources
+C:\WEbDev\Adventure Awaits\AdventureAwaits\AdventureAwaits\bin\Debug\AdventureAwaits.exe.config
+C:\WEbDev\Adventure Awaits\AdventureAwaits\AdventureAwaits\bin\Debug\AdventureAwaits.exe
+C:\WEbDev\Adventure Awaits\AdventureAwaits\AdventureAwaits\bin\Debug\AdventureAwaits.pdb
+C:\WEbDev\Adventure Awaits\AdventureAwaits\AdventureAwaits\obj\Debug\AdventureAwaits.csprojResolveAssemblyReference.cache
+C:\WEbDev\Adventure Awaits\AdventureAwaits\AdventureAwaits\obj\Debug\AdventureAwaits.MainForm.resources
+C:\WEbDev\Adventure Awaits\AdventureAwaits\AdventureAwaits\obj\Debug\AdventureAwaits.Properties.Resources.resources
+C:\WEbDev\Adventure Awaits\AdventureAwaits\AdventureAwaits\obj\Debug\AdventureAwaits.csproj.GenerateResource.Cache
+C:\WEbDev\Adventure Awaits\AdventureAwaits\AdventureAwaits\obj\Debug\AdventureAwaits.csproj.CoreCompileInputs.cache
+C:\WEbDev\Adventure Awaits\AdventureAwaits\AdventureAwaits\obj\Debug\AdventureAwaits.exe
+C:\WEbDev\Adventure Awaits\AdventureAwaits\AdventureAwaits\obj\Debug\AdventureAwaits.pdb

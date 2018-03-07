@@ -3,54 +3,90 @@ namespace AdventureAwaits
 {
     public class GameEngine
     {
+        //public declarations
 
-       public string[] monList = new string[] { "Angry Rabbit", "Severely Snippy Snail", "Diggle", "Grue" };
-       public Random rand = new Random();
-       public String returnMon = "404 MONSTER NOT FOUND";
+
+        public int attackDamage;
+
+        public string[] attackList = new string[] { " slices at ",
+            " stabs the center of ",
+            " lets out a mighty cry and scare ",
+            " break-dances aggresively toward ",
+            " sweeps the leg of ",
+            " can't stop lauging hurtfully at ",
+            " stares literal daggers at ",
+            " curses vehemently at ",
+            " hurls a hot bowl of soup at ",
+            " hurts the feelings of ",
+            " winks flirtatiously at ",
+            " breaks the heart of ",
+            " screams excitedly at ",
+            " yells out complex math at ",
+            " quotes the finest Vogon Poetry at ",
+            " cuts at the ",
+            " throws phonebooks at the ",
+            };
+
+        public string[] monList = new string[] {
+             "Angry Rabbit",
+             "Severely Snippy Snail",
+             "Diggle",
+             "Grue",
+             "Sand Worm",
+             "Murloc",
+             "Mathemagical Mage",
+             "Sleazy Lawyer",
+             "Testificate",
+             "Rabid Pokemon",
+             "Irritable Professor",
+             "Spooky Scary Skeleton",
+             "Grid Bug"};
+
+
+
+
+
+        public String returnMon = "404 MONSTER NOT FOUND";
+        
+
+
+
+
 
         public GameEngine()
         {
 
-
-
-        }
-
-        public int monRand()
-        {
-            
-            return rand.Next(1, 5);
+            Monster[] monList = new Monster[3];
 
         }
+
+        public Random rand = new Random();
 
 
         //Creates a monster from the list
         public string createMonster()
         {
 
-           
-            switch (monRand())
-            {
-                case 1:
-                    Console.WriteLine("Monster summoned: " + monList[0]);
-                    returnMon = monList[0];
-                    break;
-                case 2:
-                    Console.WriteLine("Monster summoned: " + monList[1]);
-                    returnMon = monList[1];
-                    break;
-                case 3:
-                    Console.WriteLine("Monster summoned: " + monList[2]);
-                    returnMon = monList[2];
-                    break;
-                case 4:
-                    Console.WriteLine("Monster summoned: " + monList[3]);
-                    returnMon = monList[3];
-                    break;
-            }
-            return returnMon;
+            string returnMonster = monList[rand.Next(0, monList.Length)];
+            return returnMonster;
+
+        }
+
+        public int attack()
+        {
+
+            attackDamage = rand.Next(4, 10);
+            return attackDamage;
+
         }
 
 
+        public string attackDesc()
+        {
+
+            string returnDesc = attackList[rand.Next(0, attackList.Length)];
+            return returnDesc;
+        }
 
 
     }

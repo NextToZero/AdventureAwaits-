@@ -1,6 +1,6 @@
 ﻿namespace AdventureAwaits
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,30 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.playerGB = new System.Windows.Forms.GroupBox();
             this.HPText = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.attackBT = new System.Windows.Forms.Button();
             this.MonsterStatusGB = new System.Windows.Forms.GroupBox();
-            this.MonsterHPNumLBMax = new System.Windows.Forms.Label();
+            this.MonsterHPNumLB = new System.Windows.Forms.Label();
             this.MonsterHPPB = new System.Windows.Forms.ProgressBar();
             this.MonsterHPLB = new System.Windows.Forms.Label();
             this.buttonTest = new System.Windows.Forms.Button();
-            this.MonsterHPNumLB = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.playerAttackDescLB = new System.Windows.Forms.Label();
+            this.monsterAttackDescLB = new System.Windows.Forms.Label();
+            this.InvGB = new System.Windows.Forms.GroupBox();
+            this.DefMonsterGB = new System.Windows.Forms.GroupBox();
+            this.DefMonsterLB = new System.Windows.Forms.Label();
+            this.playerGB.SuspendLayout();
             this.MonsterStatusGB.SuspendLayout();
+            this.DefMonsterGB.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // playerGB
             // 
-            this.groupBox1.Controls.Add(this.HPText);
-            this.groupBox1.Controls.Add(this.progressBar1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Status";
+            this.playerGB.Controls.Add(this.HPText);
+            this.playerGB.Controls.Add(this.progressBar1);
+            this.playerGB.Location = new System.Drawing.Point(12, 12);
+            this.playerGB.Name = "playerGB";
+            this.playerGB.Size = new System.Drawing.Size(200, 100);
+            this.playerGB.TabIndex = 0;
+            this.playerGB.TabStop = false;
+            this.playerGB.Text = "Status";
             // 
             // HPText
             // 
@@ -83,23 +88,22 @@
             // MonsterStatusGB
             // 
             this.MonsterStatusGB.Controls.Add(this.MonsterHPNumLB);
-            this.MonsterStatusGB.Controls.Add(this.MonsterHPNumLBMax);
             this.MonsterStatusGB.Controls.Add(this.MonsterHPPB);
             this.MonsterStatusGB.Controls.Add(this.MonsterHPLB);
-            this.MonsterStatusGB.Location = new System.Drawing.Point(13, 267);
+            this.MonsterStatusGB.Location = new System.Drawing.Point(226, 12);
             this.MonsterStatusGB.Name = "MonsterStatusGB";
             this.MonsterStatusGB.Size = new System.Drawing.Size(200, 100);
             this.MonsterStatusGB.TabIndex = 2;
             this.MonsterStatusGB.TabStop = false;
             this.MonsterStatusGB.Text = "MonsterName";
             // 
-            // MonsterHPNumLBMax
+            // MonsterHPNumLB
             // 
-            this.MonsterHPNumLBMax.AutoSize = true;
-            this.MonsterHPNumLBMax.Location = new System.Drawing.Point(160, 19);
-            this.MonsterHPNumLBMax.Name = "MonsterHPNumLBMax";
-            this.MonsterHPNumLBMax.Size = new System.Drawing.Size(0, 13);
-            this.MonsterHPNumLBMax.TabIndex = 2;
+            this.MonsterHPNumLB.AutoSize = true;
+            this.MonsterHPNumLB.Location = new System.Drawing.Point(144, 19);
+            this.MonsterHPNumLB.Name = "MonsterHPNumLB";
+            this.MonsterHPNumLB.Size = new System.Drawing.Size(0, 13);
+            this.MonsterHPNumLB.TabIndex = 3;
             // 
             // MonsterHPPB
             // 
@@ -122,42 +126,84 @@
             // 
             this.buttonTest.Location = new System.Drawing.Point(95, 451);
             this.buttonTest.Name = "buttonTest";
-            this.buttonTest.Size = new System.Drawing.Size(75, 23);
+            this.buttonTest.Size = new System.Drawing.Size(238, 23);
             this.buttonTest.TabIndex = 3;
-            this.buttonTest.Text = "TestButton";
+            this.buttonTest.Text = "Search the Dungeon";
             this.buttonTest.UseVisualStyleBackColor = true;
             this.buttonTest.Click += new System.EventHandler(this.buttonTest_Click);
             // 
-            // MonsterHPNumLB
+            // playerAttackDescLB
             // 
-            this.MonsterHPNumLB.AutoSize = true;
-            this.MonsterHPNumLB.Location = new System.Drawing.Point(144, 19);
-            this.MonsterHPNumLB.Name = "MonsterHPNumLB";
-            this.MonsterHPNumLB.Size = new System.Drawing.Size(0, 13);
-            this.MonsterHPNumLB.TabIndex = 3;
+            this.playerAttackDescLB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.playerAttackDescLB.Location = new System.Drawing.Point(10, 115);
+            this.playerAttackDescLB.Name = "playerAttackDescLB";
+            this.playerAttackDescLB.Size = new System.Drawing.Size(416, 23);
+            this.playerAttackDescLB.TabIndex = 4;
+            this.playerAttackDescLB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // monsterAttackDescLB
+            // 
+            this.monsterAttackDescLB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.monsterAttackDescLB.Location = new System.Drawing.Point(10, 157);
+            this.monsterAttackDescLB.Name = "monsterAttackDescLB";
+            this.monsterAttackDescLB.Size = new System.Drawing.Size(416, 23);
+            this.monsterAttackDescLB.TabIndex = 5;
+            this.monsterAttackDescLB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // InvGB
+            // 
+            this.InvGB.Location = new System.Drawing.Point(10, 184);
+            this.InvGB.Name = "InvGB";
+            this.InvGB.Size = new System.Drawing.Size(202, 261);
+            this.InvGB.TabIndex = 6;
+            this.InvGB.TabStop = false;
+            this.InvGB.Text = "Inventory";
+            // 
+            // DefMonsterGB
+            // 
+            this.DefMonsterGB.Controls.Add(this.DefMonsterLB);
+            this.DefMonsterGB.Location = new System.Drawing.Point(219, 184);
+            this.DefMonsterGB.Name = "DefMonsterGB";
+            this.DefMonsterGB.Size = new System.Drawing.Size(207, 261);
+            this.DefMonsterGB.TabIndex = 7;
+            this.DefMonsterGB.TabStop = false;
+            this.DefMonsterGB.Text = "Defeated Foes";
+            // 
+            // DefMonsterLB
+            // 
+            this.DefMonsterLB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DefMonsterLB.Location = new System.Drawing.Point(6, 16);
+            this.DefMonsterLB.Name = "DefMonsterLB";
+            this.DefMonsterLB.Size = new System.Drawing.Size(194, 238);
+            this.DefMonsterLB.TabIndex = 0;
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 486);
+            this.ClientSize = new System.Drawing.Size(438, 488);
+            this.Controls.Add(this.DefMonsterGB);
+            this.Controls.Add(this.InvGB);
+            this.Controls.Add(this.monsterAttackDescLB);
+            this.Controls.Add(this.playerAttackDescLB);
             this.Controls.Add(this.buttonTest);
             this.Controls.Add(this.MonsterStatusGB);
             this.Controls.Add(this.attackBT);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Controls.Add(this.playerGB);
+            this.Name = "MainForm";
+            this.Text = "Adventure Awaits!";
+            this.playerGB.ResumeLayout(false);
+            this.playerGB.PerformLayout();
             this.MonsterStatusGB.ResumeLayout(false);
             this.MonsterStatusGB.PerformLayout();
+            this.DefMonsterGB.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox playerGB;
         private System.Windows.Forms.Label HPText;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button attackBT;
@@ -165,8 +211,12 @@
         private System.Windows.Forms.ProgressBar MonsterHPPB;
         private System.Windows.Forms.Label MonsterHPLB;
         private System.Windows.Forms.Button buttonTest;
-        private System.Windows.Forms.Label MonsterHPNumLBMax;
         private System.Windows.Forms.Label MonsterHPNumLB;
+        private System.Windows.Forms.Label playerAttackDescLB;
+        private System.Windows.Forms.Label monsterAttackDescLB;
+        private System.Windows.Forms.GroupBox InvGB;
+        private System.Windows.Forms.GroupBox DefMonsterGB;
+        private System.Windows.Forms.Label DefMonsterLB;
     }
 }
 
