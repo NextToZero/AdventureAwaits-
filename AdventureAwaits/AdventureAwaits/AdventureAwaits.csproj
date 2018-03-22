@@ -54,7 +54,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="GameEngine.cs" />
+    <Compile Include="Item.cs" />
     <Compile Include="Monster.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -68,6 +70,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
@@ -82,6 +85,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cali Cartel Godfather.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diggle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Giant Enemy Crab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grid Bug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hooded Horror.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mathemagical Mage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sand Worm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sleazy Lawyer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StoneFloorTexture_0.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

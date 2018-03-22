@@ -1,0 +1,9 @@
+Grue:70:100:20:30
+Hooded Horror:30:40:20:30
+Sand Worm:15:20:20:30
+Mathemagical Mage:25:35:20:30
+Sleazy Lawyer:5:10:20:30
+Grid Bug:70:100:20:30
+Cali Cartel Godfather:70:100:20:30
+Giant Enemy Crab:70:100:20:30
+Diggle:1:10:1:5
